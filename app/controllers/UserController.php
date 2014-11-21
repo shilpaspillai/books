@@ -1,4 +1,6 @@
 <?php
+use app\lib\Services\Notification as Notification;
+
 class UserController extends BaseController{
     
     public function show_login_page()
@@ -8,7 +10,11 @@ class UserController extends BaseController{
     
     public function process_login_page()
     {
-        
+     $config=array(
+     $email = Input::get('email'), 
+     $password = Input::get('password')
+     );
+     
     }
     
 }

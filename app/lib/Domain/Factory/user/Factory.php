@@ -1,8 +1,19 @@
 <?php
+namespace app\lib\Domain\Factory\user;
+use app\lib\Domain\Entity\User\Entity as Entity;
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+Class Factory{
 
+     public static function create($user_config)
+    {  
+        $user_entity=new Entity();
+        foreach($user_config as $key=>$value)
+        {
+            $user_entity->$key=$value;
+        }
+        
+        return $user_entity;
+    }
+    }
+
+?>

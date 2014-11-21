@@ -1,8 +1,18 @@
 <?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+namespace app\lib\Services;
+Class Notification {
+    public $errors = array(
+        '1000' =>'email not valid',
+        '1001' => 'id not valid',
+        '1002' => 'password is required and more than 6 characters',
+        '1003' => 'password Invalid',
+        '1004' => 'User not valid',
+        '1005' => 'Invalid username'
+    );
+    
+    public function __construct() {
+        return $this;
+    }
+    
+}
+?>
